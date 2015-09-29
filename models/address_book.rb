@@ -4,13 +4,19 @@ require_relative "entry.rb"
    attr_accessor :entries
 
    def initialize
-     @entries = []
+      @entries = []
    end
    
     def remove_entry(name, phone, email)
+      delete_entry = nil
         
-        @entries.each do |entry|
+      @entries.each do |entry|
+        if name == entry.name && phone == entry.phone_number &&  email == entry.email
+           delete_entry = entry
         end
+      end
+        
+      @entries.delete(delete_entry)
         
     end
    
