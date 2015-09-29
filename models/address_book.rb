@@ -8,8 +8,10 @@ require_relative "entry.rb"
    end
    
     def remove_entry(name, phone, email)
+        
         @entries.each do |entry|
         end
+        
     end
    
    def add_entry(name, phone, email)
