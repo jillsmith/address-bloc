@@ -7,6 +7,10 @@ class AddressBook
     def initialize
         @entries = []
     end
+        
+    def nuke
+      @entries = []  
+    end
    
     def remove_entry(name, phone, email)
         @entries.each do |entry|
